@@ -18,11 +18,17 @@ header {
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header h1 {
     margin: 0;
     font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -39,7 +45,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 400;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
@@ -54,17 +60,41 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
 .project-card {
     background: #00adb5;
     color: #fff;
     padding: 2rem;
     margin: 1rem 0;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
 }
 
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 footer {
